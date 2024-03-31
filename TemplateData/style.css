@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body { padding: 0; margin: 0; overflow: hidden; background: rgb(43, 24, 17);}
+#unity-container { position: absolute }
+#unity-container.unity-desktop { 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); 
+    overflow: hidden; 
+    border-radius: 5px;
+}
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas { background: #000000; border-radius: 5px; }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center; border-radius: 5px; }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center; border-radius: 5px; }
+#unity-footer { 
+    position: absolute;
+    bottom: 0; left: 0;
+    background: rgba(255, 255, 255, 0.514); 
+    display: flex;
+    margin-bottom: 7px;
+    margin-left: 2px;
+    border-radius: 3px;
+    align-items: center;}
+.unity-mobile #unity-footer { display: none }
+
+/* #unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center } */
+#unity-webgl-logo { display: none; }
+#unity-build-title { float: right; margin-left: 10px; margin-right: 10px; font-family: arial; font-size: 14px }
+#unity-fullscreen-button { 
+    float: right; 
+    width: 20px; 
+    height: 20px; 
+    background: url('f-screen.png') no-repeat center; 
+    background-size: cover; 
+    margin: 3px;
+    cursor: pointer;
+}
+
+#unity-fullscreen-button:hover{
+    filter: invert();
+}
+
+#unity-warning { 
+    position: absolute; 
+    left: 50%; top: 5%; 
+    transform: translate(-50%); 
+    background: rgb(224, 224, 224); 
+    padding: 10px; 
+    display: none;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px; }
+
+#unity-build-title a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+}
+
+#unity-build-title a:hover{
+    color: #00ffff;
+}
